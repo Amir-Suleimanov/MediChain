@@ -11,7 +11,7 @@ from products.serializers import CargoSerializer
 from storage.models import StorageCell
 
 
-class CargoRetrieveViewSet(RetrieveModelMixin, GenericViewSet):
+class CargoRetrieveViewSet(RetrieveModelMixin, ListModelMixin, GenericViewSet):
     queryset = Cargo.objects.all()
     serializer_class = CargoSerializer
 

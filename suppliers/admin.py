@@ -1,7 +1,8 @@
 from django.contrib import admin
-from suppliers.models import Supplier
+from .models import Supplier
 
 @admin.register(Supplier)
 class SupplierAdmin(admin.ModelAdmin):
-    list_display = ('id', 'full_name', 'passport', 'experience', 'delivered_goods_count', 'balance')
-    search_fields = ('full_name', 'passport')
+    list_display = ('full_name', 'experience', 'balance', 'delivered_goods_count')
+    list_filter = ('is_staff',)
+    search_fields = ('full_name',)

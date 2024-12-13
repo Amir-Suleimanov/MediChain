@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'storage',
     'suppliers',
 
-    'rest_framework'
+    'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
