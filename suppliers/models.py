@@ -9,5 +9,10 @@ class Supplier(models.Model):
     balance = models.DecimalField(max_digits=10, decimal_places=2, default=0.00, verbose_name='Баланс')  # Баланс
     photo = models.ImageField(upload_to='suppliers/photos/', verbose_name='Фото')  # Фото
 
+    
+    class Meta:
+        verbose_name = 'Поставщик'
+        verbose_name_plural = 'Поставщики'
+
     def __str__(self):
         return self.full_name
